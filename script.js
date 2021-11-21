@@ -44,10 +44,16 @@ function Game(){
             let playerSelection = prompt("What do you choose?");
             let computerSelection = computerPlay();
             let result = playRound(playerSelection,computerSelection);
+
+            if(result == "You win this round!"){
+                playerScore++;
+            }else if(result == "I win"){
+                computerScore++;
+            }
             console.log(result);
             console.log("Computer score:" + computerScore);
             console.log("Player score:" + playerScore);
-            console.log("---------------------------------")
+            console.log("---------------------------------");
 
         }
 
