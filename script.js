@@ -39,25 +39,21 @@ function Game(){
     let playerScore = 0;
     let computerScore = 0;
 
-    for(let i = 1; i <= 5; i++){
+        for(let i = 0; i < 5; i++){
+
+            let playerSelection = prompt("What do you choose?");
+            let computerSelection = computerPlay();
+            let result = playRound(playerSelection,computerSelection);
+            console.log(result);
+            console.log("Computer score:" + computerScore);
+            console.log("Player score:" + playerScore);
+            console.log("---------------------------------")
+
+        }
 
         
-        let playerSelection = "scissors";
-        let computerSelection = computerPlay();
-        let result = playRound(playerSelection,computerSelection);
-        console.log(i + result);
-        
-    }
-
-
-
 }
 
 
 Game();
-/*let playerSelection = "scissors";
-let computerSelection = computerPlay();
-let result = playRound(playerSelection,computerSelection);
 
-console.log(result);
-*/
